@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - FaculTrack</title>
+  <link rel="icon" type="image/png" href="white.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Basic CSS for layout and styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('background-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    header {
+      background-color: #584158;
+      padding: 10px 20px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    header img {
+      width: 11%;
+    }
+
+    header h2 {
+      font-size: 1.8em;
+      font-family: cursive;
+    }
+
+    /* Hamburger Menu */
+    .menu-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .hamburger {
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      height: 5px;
+      width: 100%;
+      background-color: #fbf7f7;
+      margin: 5px 0;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 0;
+      background-color: #333;
+      border-radius: 5px;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #575757;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      display: flex;
+      flex-direction: row;
+      padding: 50px;
+      background: rgba(111, 109, 109, 0.7);
+    }
+
+    .contact-info {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .contact-info h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color:brown;
+      text-decoration: underline;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      font-size: 1em;
+    }
+
+    .icon-text {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+    }
+
+    /* Circle styling for icons */
+    .icon-circle {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: #000; /* Black background for icon circle */
+      color: white; /* White icon color */
+      font-size: 20px;
+      margin-right: 15px;
+    }
+
+    .contact-info a {
+      color: #1c0673;
+      text-decoration: none;
+    }
+
+    .contact-form-container {
+      flex: 1;
+      padding: 20px;
+      background-color: #fff;
+      color: #787373;
+      border-radius: 8px;
+    }
+
+    .contact-form-container h2 {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .contact-form-container input, .contact-form-container textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    .contact-form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #00c1c1;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+
+    .contact-form-container button:hover {
+      background-color: #008a8a;
+    }
+
+    footer {
+      background-color: #584158;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+    }
+    .p{
+        color: #000;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with navigation -->
+  <header>
+    <div class="logo-container">
+        <img src="smvitm.jpg" alt="SMVITM LOGO">
+        <h2>FaculTrack</h2>
+    </div>
+  </header>
+
+  <!-- Hamburger Menu -->
+  <div class="menu-container">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="dropdown-menu">
+      <a href="home.html">Home</a>
+      <a href="faclogin.html">FacLogin</a>
+      <a href="adminlogin.html">AdminLogin</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Contact Us Section -->
+  <section class="contact-section">
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p class="p">If you have any questions, don't hesitate to get in touch through the contact details below or by completing the form.</p>
+      <div class="icon-text">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i> <!-- Location icon -->
+        </div>
+        <p>Shri Madhwa Vadiraja Institute of Technology & Management, Vishwothama Nagar, Bantakal, Udupi - 574115, Karnataka, India.</p>
+      </div>
+      <div class="icon-text">
+        <div class="icon-circle">
+          <i class="fas fa-phone"></i> <!-- Phone icon -->
+        </div>
+        <p>+91 xxxxxxxxxx</p>
+      </div>
+      <div class="icon-text">
+        <div class="icon-circle">
+          <i class="fas fa-envelope"></i> <!-- Envelope icon -->
+        </div>
+        <p><a href="mailto:alfiya.22cs017@sode-edu.in">alfiya.22cs017@sode-edu.in</a></p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-container">
+      <h2>Send Message</h2>
+      <form action="#">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Type your Message..." rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 FaculTrack. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.querySelector('.dropdown-menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+  
+</body>
+</html>
