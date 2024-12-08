@@ -10,6 +10,7 @@
     /* Basic CSS for layout and styling */
     body {
       font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f6f8f7, #45a049);
       margin: 0;
       padding: 0;
       background: url('background-image.jpg') no-repeat center center fixed;
@@ -170,8 +171,8 @@
     </div>
     <div class="dropdown-menu">
       <a href="home.html">Home</a>
-      <a href="faclogin.html">FacLogin</a>
-      <a href="adminlogin.html">AdminLogin</a>
+      <a href="faclogin.php">FacLogin</a>
+      <a href="adminlog.php">AdminLogin</a>
       <a href="aboutus.html">About Us</a>
       <a href="contactus.html">Contact Us</a>
     </div>
@@ -180,14 +181,16 @@
   <!-- Faculty Sign-Up Section -->
   <div class="signup-container">
     <h2 style="color: black;">Admin Sign Up</h2>
-    <form class="signup-form" action="dashboard.html" method="POST">
-        <input type="text" name="facultyID" placeholder="Faculty ID" required>
+    <form class="signup-form" action="adminsignup.php" method="POST">
+        <input type="text" name="adminID" placeholder="adminID" required>
         <input type="text" name="name" placeholder="Full Name" required>
         <input type="email" name="email" placeholder="Email Address" required>
         <input type="password" name="password" placeholder="Password" required>
+        <input type="date"  name="birthdate" placeholder="Birthdate" required>
+        <input type="text"  name="fav_color" placeholder="Favorite Color" required>
         <button type="submit">Sign Up</button>
     </form>
-    <a href="faclogin.html" class="login-link">Already have an account? Login here</a>
+    <a href="adminlog.php" class="login-link">Already have an account? Login here</a>
   </div>
 <br>
   <!-- Footer -->
