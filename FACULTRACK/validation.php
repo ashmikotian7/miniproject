@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "admin";
+    $dbname = "fac";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // echo "Email: $email, Birthdate: $birthdate, Favorite Color: $fav_color";
 
     // Prepare the SQL statement
-    $sql = "SELECT * FROM admin WHERE email = ? AND birthdate = ? AND LOWER(fav_color) = ?";
+    $sql = "SELECT * FROM faculty WHERE email = ? AND birthdate = ? AND LOWER(fav_color) = ?";
     $stmt = $conn->prepare($sql);
     if ($stmt === false) {
         die("Error preparing SQL statement: " . $conn->error);
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if record exists
     if ($result->num_rows > 0) {
         // Redirect to reset password page
-        header("Location: areset_password.php?email=" . urlencode($email));
+        header("Location: resetpass.php?email=" . urlencode($email));
         exit;
     } else {
         $error = "Validation failed. Please check your information.";
@@ -150,7 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php if (!empty($error)): ?>
                 <div class="error"><?php echo htmlspecialchars($error); ?></div>
             <?php endif; ?>
-            
+             
             <button type="submit">Validate</button>
         </form>
     </div>

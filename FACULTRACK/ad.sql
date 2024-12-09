@@ -11,8 +11,6 @@ CREATE TABLE admin (
     name VARCHAR(100) NOT NULL,              -- Admin's full name
     email VARCHAR(100) NOT NULL UNIQUE,      -- Admin's email address
     password VARCHAR(255) NOT NULL,          -- Hashed password
-    reset_token VARCHAR(255) DEFAULT NULL,   -- Token for password reset functionality
-    token_expiry DATETIME DEFAULT NULL,      -- Expiry time for the reset token
     birthdate DATE NOT NULL,                 -- Admin's birthdate (used for verification)
     fav_color VARCHAR(50) NOT NULL           -- Admin's favorite color (used for verification)
 );

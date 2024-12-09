@@ -77,7 +77,7 @@ $conn->close();
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #f6f8f7, #45a049);
+            background: linear-gradient(150deg, #f6f8f7, #43324f, #f6f8f7);
             background-size: cover;
             color: #fff;
         }
@@ -101,7 +101,7 @@ $conn->close();
         }
 
         header img {
-            width: 11%;
+            width: 10%;
         }
 
         header h2 {
@@ -267,7 +267,7 @@ $conn->close();
     <!-- Header with logo, title, and menu -->
     <header>
         <div class="logo-container">
-            <img src="smvitm.jpg" alt="SMVITM LOGO">
+            <img src="white.jpg" alt="SMVITM LOGO">
             <h2>FaculTrack</h2>
         </div>
         <!-- Hamburger Menu -->
@@ -308,7 +308,7 @@ $conn->close();
             <a href="aforgot-password.php">Forgot Password?</a>
         </div>
         <div class="signup-link">
-            <p>Don't have an account? <a href="asignup.html">SIGN-UP</a></p>
+            <p>Don't have an account? <a href="asignup.php">SIGN-UP</a></p>
         </div>
 
         <!-- Instructions Section -->

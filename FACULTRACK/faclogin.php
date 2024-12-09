@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         header img {
-            width: 11%;
+            width: 10%;
         }
 
         header h2 {
@@ -263,7 +263,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Header with logo, title, and menu -->
     <header>
         <div class="logo-container">
-            <img src="smvitm.jpg" alt="SMVITM LOGO">
+            <img src="white.jpg" alt="SMVITM LOGO">
             <h2>FaculTrack</h2>
         </div>
         <!-- Hamburger Menu -->
@@ -301,10 +301,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <!-- Forgot Password and Sign-Up links -->
         <div class="forgot-password">
-            <a href="forgot-password.html">Forgot Password?</a>
+            <a href="forgot-password.php">Forgot Password?</a>
         </div>
         <div class="signup-link">
-            <p>Don't have an account? <a href="signup.html">SIGN-UP</a></p>
+            <p>Don't have an account? <a href="signup.php">SIGN-UP</a></p>
         </div>
 
         <!-- Instructions Section -->

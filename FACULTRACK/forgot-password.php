@@ -90,12 +90,12 @@
     <div class="forgot-password-container">
         <h2>Forgot Password?</h2>
         <p>Please enter your registered email address to receive a password reset link.</p>
-        <form action="aforgot_password_action.php" method="POST">
+        <form action="forget.php" method="POST">
             <label for="email">Email Address</label>
             <input type="email" name="email" id="email" placeholder="Enter your email" required>
             <button type="submit">Verification</button>
         </form>
-        <a href="adminlog.php">Back to Login</a>
+        <a href="faclogin.php">Back to Login</a>
     </div>
 </body>
 </html>

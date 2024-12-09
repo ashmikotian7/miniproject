@@ -14,10 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Collect form data
-    $adminID = $_POST['adminID'];
+    $facultyID = $_POST['facultyID'];
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT); // Encrypt the password
+    $birthdate = $_POST['birthdate'];
+    $fav_color = $_POST['fav_color'];
 
     // Validate email domain
     if (!str_ends_with($email, "@sode-edu.in")) {
@@ -26,9 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Insert data into the database
-    $sql = "INSERT INTO admin (adminID, name, email, password) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO faculty (facultyID, name, email, password, birthdate, fav_color) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssss", $adminID, $name, $email, $password);
+    $stmt->bind_param("ssssss", $facultyID, $name, $email, $password, $birthdate, $fav_color);
 
     if ($stmt->execute()) {
         echo json_encode(["status" => "success", "message" => "Signup successful!"]);
